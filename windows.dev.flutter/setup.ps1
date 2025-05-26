@@ -12,13 +12,13 @@ scoop install dart
 # input prompt install visual studio community
 $install_visual_studio = Read-Host "Install visual studio community? (y/n)"
 if ($install_visual_studio -ne "n") {
-    winget install -e --id Microsoft.VisualStudio.2022.Community
+    winget.exe install --id "Microsoft.VisualStudio.2022.RemoteTools" --exact --source winget --accept-source-agreements --disable-interactivity --silent  --accept-package-agreements --force 
 }
 
 # android studio
 $install_android_studio = Read-Host "Install android studio? (y/n)"
 if ($install_android_studio -ne "n") {
-    winget install -e --id Google.AndroidStudio
+    winget.exe install --id "Google.AndroidStudio" --exact --source winget --accept-source-agreements --disable-interactivity --silent  --accept-package-agreements --force 
 }
 
 # check flutter installed
