@@ -14,6 +14,8 @@ scoop install flutter
 scoop install dart
 
 
+$winget_args = "--exact --source winget --accept-source-agreements --disable-interactivity --silent  --accept-package-agreements --force "
+
 # input prompt install visual studio community
 if (-not $skip_confirm) {
     $install_visual_studio = Read-Host "Install visual studio community? (y/n)"
@@ -21,7 +23,7 @@ if (-not $skip_confirm) {
     $install_visual_studio = "y"
 }
 if ($install_visual_studio -ne "n") {
-    winget.exe install --id "Microsoft.VisualStudio.2022.RemoteTools" --exact --source winget --accept-source-agreements --disable-interactivity --silent  --accept-package-agreements --force 
+    winget.exe install --id "Microsoft.VisualStudio.2022.RemoteTools" $winget_args
 }
 
 # android studio
@@ -31,7 +33,7 @@ if (-not $skip_confirm) {
     $install_android_studio = "y"
 }
 if ($install_android_studio -ne "n") {
-    winget.exe install --id "Google.AndroidStudio" --exact --source winget --accept-source-agreements --disable-interactivity --silent  --accept-package-agreements --force 
+    winget.exe install --id "Google.AndroidStudio" $winget_args
 }
 
 # check flutter installed

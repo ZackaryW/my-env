@@ -1,4 +1,8 @@
-winget install --id=ElementLabs.LMStudio  -e
+
+$winget_args = "--exact --source winget --accept-source-agreements --disable-interactivity --silent  --accept-package-agreements --force "
+
+
+winget install --id=ElementLabs.LMStudio  $winget_args
 # use lms to install coder model
 
 # Bootstrap LM Studio CLI
