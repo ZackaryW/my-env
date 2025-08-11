@@ -1,4 +1,4 @@
-$winget_args = "--accept-source-agreements --disable-interactivity -h --accept-package-agreements --force"
+winget_args = "--accept-source-agreements --disable-interactivity -h --accept-package-agreements --force"
 
 function Invoke-FileByExtension {
     param (

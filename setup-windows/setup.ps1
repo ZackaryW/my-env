@@ -42,6 +42,5 @@ if (Get-Command scoop -ErrorAction SilentlyContinue) {
 echo "INSTALL BROWSER"
 winget install Zen-Team.Zen-Browser @($winget_args.Split())
 
-scoop install floorp
 
 

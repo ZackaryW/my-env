@@ -1,4 +1,4 @@
-. ".\lib.ps1"
+. "../shared-lib/lib.ps1"
 
 winget install --id=ElementLabs.LMStudio $winget_args
 
